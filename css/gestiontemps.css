@@ -1,0 +1,265 @@
+/* Plugin gestiontemps — styles du disque et des vues. */
+
+/* Popup de fin de chrono. */
+.gt-timer-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1080;
+}
+
+.gt-timer-modal-box {
+    width: 90%;
+    max-width: 480px;
+    margin: 0;
+}
+
+/* Barre de navigation interne du plugin. */
+.gestiontemps-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.gestiontemps-nav a i {
+    margin-right: 4px;
+}
+
+.gestiontemps-donut,
+.gestiontemps-clock {
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.gestiontemps-donut-svg .gt-ring-bg,
+.gestiontemps-clock-svg .gt-ring-bg {
+    stroke: var(--tblr-border-color, #e6e7e9);
+}
+
+/* Le disque journalier réutilise les styles du disque de production. */
+.gestiontemps-clock-svg .gt-seg-prod { fill: #2fb344; }
+.gestiontemps-clock-svg .gt-seg-manual { fill: #f59f00; }
+.gestiontemps-clock-svg .gt-seg-pause { fill: #4263eb; }
+/* Coupure : hachurée, pour la distinguer au premier coup d'œil. */
+.gestiontemps-clock-svg .gt-seg-break { fill: url(#gt-hatch); }
+.gestiontemps-clock-svg .gt-hatch-bg { fill: #dfe3e9; }
+.gestiontemps-clock-svg .gt-hatch-line { stroke: #8a94a6; stroke-width: 3; }
+.gestiontemps-clock-svg .gt-clickable { cursor: pointer; }
+
+/* Temps qui se chevauchent : chaque couche est dessinée sur un anneau plus
+   intérieur, avec un liseré clair pour donner l'effet d'empilement. */
+.gestiontemps-clock-svg .gt-seg-stacked {
+    stroke: #fff;
+    stroke-width: 0.75;
+    filter: brightness(0.92);
+}
+.gestiontemps-clock-svg .gt-seg-prod:hover,
+.gestiontemps-clock-svg .gt-seg-manual:hover,
+.gestiontemps-clock-svg .gt-seg-pause:hover { opacity: 0.8; }
+
+.gestiontemps-legend .legend-pause {
+    background: #4263eb;
+    display: inline-block;
+    width: 14px; height: 14px; border-radius: 3px; vertical-align: middle; margin-right: 4px;
+}
+.gestiontemps-legend .legend-sched {
+    background: #4263eb;
+    opacity: 0.35;
+    display: inline-block;
+    width: 14px; height: 14px; border-radius: 3px; vertical-align: middle; margin-right: 4px;
+}
+.gestiontemps-clock-svg .gt-tick {
+    stroke: var(--tblr-body-color, #6c7a91);
+    stroke-width: 1;
+    opacity: 0.5;
+}
+.gestiontemps-clock-svg .gt-tick-major { stroke-width: 2; opacity: 0.9; }
+.gestiontemps-clock-svg .gt-center-pct {
+    font-size: 24px;
+    font-weight: 700;
+    fill: var(--tblr-body-color, #1d273b);
+}
+.gestiontemps-clock-svg .gt-center-label {
+    font-size: 12px;
+    fill: var(--tblr-muted, #8a94a6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.gestiontemps-clock-svg .gt-hour-label {
+    font-size: 8px;
+    fill: var(--tblr-muted, #8a94a6);
+}
+/* Repères de l'horaire théorique. */
+.gestiontemps-clock-svg .gt-sched-band { fill: #4263eb; opacity: 0.35; }
+.gestiontemps-clock-svg .gt-sched-mark {
+    stroke: #4263eb;
+    stroke-width: 2;
+    opacity: 0.8;
+}
+.gestiontemps-clock-svg .gt-hour-major {
+    font-size: 10px;
+    font-weight: 700;
+    fill: var(--tblr-body-color, #1d273b);
+}
+
+.gestiontemps-donut-svg .gt-seg-prod {
+    fill: #2fb344; /* vert = production */
+}
+
+.gestiontemps-donut-svg .gt-seg-manual {
+    fill: #f59f00; /* orange = non-production */
+}
+
+.gestiontemps-donut-svg .gt-tick {
+    stroke: var(--tblr-body-color, #6c7a91);
+    stroke-width: 1;
+    opacity: 0.5;
+}
+
+.gestiontemps-donut-svg .gt-tick-major {
+    stroke-width: 2;
+    opacity: 0.9;
+}
+
+.gestiontemps-donut-svg .gt-center-pct {
+    font-size: 28px;
+    font-weight: 700;
+    fill: var(--tblr-body-color, #1d273b);
+}
+
+.gestiontemps-donut-svg .gt-center-label {
+    font-size: 13px;
+    fill: var(--tblr-muted, #8a94a6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gestiontemps-legend span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.gestiontemps-legend .legend-prod {
+    background: #2fb344;
+}
+
+.gestiontemps-legend .legend-manual {
+    background: #f59f00;
+}
+
+.text-green { color: #2fb344; }
+.text-red { color: #d63939; }
+
+/* Graphique à barres jour par jour. */
+.gestiontemps-bars {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.gestiontemps-bars-svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.gestiontemps-bars-svg .gt-grid {
+    stroke: var(--tblr-border-color, #e6e7e9);
+    stroke-width: 1;
+}
+
+.gestiontemps-bars-svg .gt-axis-label,
+.gestiontemps-bars-svg .gt-day-label {
+    font-size: 10px;
+    fill: var(--tblr-muted, #8a94a6);
+}
+
+.gestiontemps-bars-svg .gt-bar-over { fill: #2fb344; }      /* >= théorique */
+.gestiontemps-bars-svg .gt-bar-under { fill: #f59f00; }     /* < théorique */
+.gestiontemps-bars-svg .gt-bar-neutral { fill: #99a4b5; }   /* pas d'horaire */
+
+.gestiontemps-bars-svg .gt-expected-mark {
+    stroke: #d63939;
+    stroke-width: 2;
+    stroke-dasharray: 3 2;
+}
+
+.gestiontemps-legend .legend-worked {
+    background: #2fb344;
+    display: inline-block;
+    width: 14px; height: 14px; border-radius: 3px; vertical-align: middle; margin-right: 4px;
+}
+.gestiontemps-legend .legend-expected {
+    background: #d63939;
+    display: inline-block;
+    width: 14px; height: 3px; vertical-align: middle; margin-right: 4px;
+}
+
+/* --- Synthèse : frise horaire d'une journée (« disque à plat ») ------------ */
+.gt-flat-day {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+.gt-flat-label {
+    flex: 0 0 190px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+.gt-flat-track {
+    position: relative;
+    flex: 1 1 auto;
+    height: 26px;
+    background: var(--tblr-border-color, #e6e7e9);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.gt-flat-seg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-width: 1px;
+    /* Les temps qui se chevauchent restent visibles l'un derrière l'autre. */
+    opacity: 0.85;
+}
+.gt-flat-prod   { background: #2fb344; }
+.gt-flat-manual { background: #f59f00; }
+.gt-flat-pause  { background: #4263eb; }
+/* Coupure : hachures grises, hors temps de travail. */
+.gt-flat-break {
+    background: repeating-linear-gradient(
+        45deg,
+        #dfe3e9, #dfe3e9 4px,
+        #8a94a6 4px, #8a94a6 8px
+    );
+}
+.gestiontemps-legend .legend-break {
+    background: repeating-linear-gradient(
+        45deg,
+        #dfe3e9, #dfe3e9 3px,
+        #8a94a6 3px, #8a94a6 6px
+    );
+    display: inline-block;
+    width: 14px; height: 14px; border-radius: 3px; vertical-align: middle; margin-right: 4px;
+}
+.gt-flat-tick {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.12);
+}
+.gt-flat-hour {
+    position: absolute;
+    bottom: 1px;
+    transform: translateX(2px);
+    font-size: 9px;
+    color: rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+}

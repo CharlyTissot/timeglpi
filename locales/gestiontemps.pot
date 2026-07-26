@@ -1,0 +1,54 @@
+#
+# Plugin gestiontemps — modèle de traduction (POT)
+# Les chaînes sources sont en français : sans fichier .mo, l'interface
+# s'affiche en français. Pour une traduction (ex. en_GB), copiez ce fichier
+# en <locale>.po, traduisez, puis compilez en <locale>.mo.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gestiontemps 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Gestion du temps"
+msgstr ""
+
+msgid "Tableau de bord"
+msgstr ""
+
+msgid "Saisies de temps"
+msgstr ""
+
+msgid "Tirelire"
+msgstr ""
+
+msgid "Journal"
+msgstr ""
+
+msgid "Production"
+msgstr ""
+
+msgid "Non-production"
+msgstr ""
+
+msgid "% Production"
+msgstr ""
+
+msgid "Disque de production"
+msgstr ""
+
+msgid "Semaine A"
+msgstr ""
+
+msgid "Semaine B"
+msgstr ""
+
+msgid "Heures supplémentaires"
+msgstr ""
+
+msgid "Décréditer"
+msgstr ""

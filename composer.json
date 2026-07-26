@@ -1,0 +1,14 @@
+{
+    "name": "duotech/gestiontemps",
+    "description": "Plugin GLPI de gestion du temps : production tickets, temps manuel, tirelire d'heures supp et journal d'audit. Compatible GLPI 10 et 11.",
+    "type": "glpi-plugin",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "GlpiPlugin\\Gestiontemps\\": "src/"
+        }
+    }
+}
