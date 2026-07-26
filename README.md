@@ -91,4 +91,4 @@ SHOW TABLES LIKE 'glpi_plugin_gestiontemps_%';
 
 ## Licence
 
-GPL-3.0-or-later — Duotech.
+GPL-3.0-or-later — Proximiweb.

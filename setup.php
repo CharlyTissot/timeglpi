@@ -86,7 +86,7 @@ function plugin_version_gestiontemps(): array
     return [
         'name'           => __('Gestion du temps', 'gestiontemps'),
         'version'        => PLUGIN_GESTIONTEMPS_VERSION,
-        'author'         => 'Duotech',
+        'author'         => 'Proximiweb',
         'license'        => 'GPL-3.0+',
         'homepage'       => '',
         'requirements'   => [
