@@ -1,4 +1,8 @@
 # Plugin GLPI BETA— Gestion du temps (`gestiontemps`)
+> ☕ **Un café pour soutenir mes projets libres ?!** → https://buymeacoffee.com/charlytissot
+
+[![Buy Me A Coffee](https://img.shields.io/badge/%E2%98%95%20Un%20caf%C3%A9%20pour%20soutenir%20mes%20projets%20libres-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/charlytissot)
+
 
 Plugin de gestion du temps pour **GLPI 10 (≥ 10.0.6) et GLPI 11**.
 
